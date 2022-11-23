@@ -4,13 +4,16 @@ __**OS**__
 OpenSUSE Leap 15.4
 
 __**First**__
-You need to disable **SWAP**```bash
+You need to disable **SWAP**
+```bash
 sudo swapoff -a
-```And after edit `/etc/fstab`
+```
+And after edit `/etc/fstab`
 
 __**Second (master)**__
 Run As **root**
-`install.sh` ```bash
+`install.sh`
+```bash
 cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
 overlay
 br_netfilter
@@ -88,7 +91,8 @@ helm install cilium cilium/cilium \
 
 __**Second (worker)**__
 Run As **root**
-`install.sh` ```bash
+`install.sh`
+```bash
 cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
 overlay
 br_netfilter
