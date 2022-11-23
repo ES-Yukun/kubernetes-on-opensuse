@@ -94,8 +94,11 @@ helm install cilium cilium/cilium \
 ```
 
 __**Second (worker)**__
+
 Run As **root**
+
 `install.sh`
+
 ```bash
 cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
 overlay
