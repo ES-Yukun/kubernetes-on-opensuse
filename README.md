@@ -4,14 +4,18 @@ __**OS**__
 OpenSUSE Leap 15.4
 
 __**First**__
+
 You need to disable **SWAP**
+
 ```bash
 sudo swapoff -a
 ```
 And after edit `/etc/fstab`
 
 __**Second (master)**__
+
 Run As **root**
+
 `install.sh`
 ```bash
 cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
